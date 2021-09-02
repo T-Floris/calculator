@@ -1,30 +1,28 @@
-<!--
-The markup in NativeScript apps contains a series of user interface components, each
-of which NativeScript renders with a platform-specific iOS or Android native control.
-You can find a full list of user interface components you can use in your app at
-https://docs.nativescript.org/ui/components.
--->
+
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
-    <!--
-    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
-    http://docs.nativescript.org/ui/action-bar
-    -->
+
     <ActionBar title="My App" icon="" />
 
-    <!--
-    The StackLayout stacks UI components on the screen—either vertically or horizontally.
-    In this case, the StackLayout does vertical stacking; you can change the stacking to
-    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
-    You can learn more about NativeScript layouts at
-    https://docs.nativescript.org/ui/layout-containers.
-
-    These components make use of the NativeScript core theme, which styles them with element selectors.
-    The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
-    You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
-    -->
-    <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center" />
-        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
-    </StackLayout>
+    <GridLayout columns="*" rows="*, *, *, *, *, *" margin="20" padding="20" backgroundColor="lightgray">
+        <Button id="btnTal1" value="1" tap="{{onSetNumber}}" text="Hent 1. tal" row="0" col="0" class="h1 text-center"/>
+        <GridLayout columns="2*, *" rows="*" row="1" col="0">
+            <Label text="Tal 1: " row="0" col="0" class="h2 text-center"/>
+            <Label id="firstNumber" text="{{ number1 }}" row="0" col="1" class="h2 text-center"/>        
+        </GridLayout>
+        <Button id="btnTal2" value="2" tap="{{onSetNumber}}" text="Hent 2. tal" row="2" col="0" class="h1 text-center"/>
+        <GridLayout columns="2*, *" rows="*" row="3" col="0">
+            <Label text="Tal 2: " row="0" col="0" class="h2 text-center"/>
+            <Label id="secondNumber" text="{{ number2 }}" row="0" col="1" class="h2 text-center"/>
+        </GridLayout>
+        <GridLayout columns="*, *, *, *" rows="*" row="4" col="0" backgroundColor="gray">
+            <Button id="add" text="+" row="0" col="0" tap="{{onAdd}}" class="h2 text-center"/>
+            <Button id="minus" text="-" row="0" col="1" tap="{{onMinus}}" class="h2 text-center"/>
+            <Button id="times" text="*" row="0" col="2" tap="{{onTimes}}" class="h2 text-center"/>
+            <Button id="divide" text="/" row="0" col="3" tap="{{onDivide}}" class="h2 text-center"/>
+        </GridLayout>
+        <GridLayout columns="2*, *" rows="*" row="5" col="0">
+            <Label text="Res: " row="0" col="0" class="h2 text-center"/>
+            <Label id="result" text="{{ result }}" row="0" col="1" class="h2 text-center"/>
+        </GridLayout>
+    </GridLayout>
 </Page>
