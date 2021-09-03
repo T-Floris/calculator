@@ -4,12 +4,12 @@
     <ActionBar title="My App" icon="" />
 
     <GridLayout columns="*" rows="*, *, *, *, *, *" margin="20" padding="20" backgroundColor="lightgray">
-        <Button id="btnTal1" value="1" tap="{{onSetNumber}}" text="Hent 1. tal" row="0" col="0" class="h1 text-center"/>
+        <Button id="btnTal1" value="1" tap="{{onNumberPage}}" text="Hent 1. tal" row="0" col="0" class="h1 text-center"/>
         <GridLayout columns="2*, *" rows="*" row="1" col="0">
             <Label text="Tal 1: " row="0" col="0" class="h2 text-center"/>
             <Label id="firstNumber" text="{{ number1 }}" row="0" col="1" class="h2 text-center"/>        
         </GridLayout>
-        <Button id="btnTal2" value="2" tap="{{onSetNumber}}" text="Hent 2. tal" row="2" col="0" class="h1 text-center"/>
+        <Button id="btnTal2" value="2" tap="{{onNumberPage}}" text="Hent 2. tal" row="2" col="0" class="h1 text-center"/>
         <GridLayout columns="2*, *" rows="*" row="3" col="0">
             <Label text="Tal 2: " row="0" col="0" class="h2 text-center"/>
             <Label id="secondNumber" text="{{ number2 }}" row="0" col="1" class="h2 text-center"/>

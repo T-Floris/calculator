@@ -36,15 +36,11 @@ export class MyObservable extends Observable{
         this._result = v;
         this.notifyPropertyChange("result", v)
     }
-    
-
-    
-
 
 
     ///////////////////////////////////////////////////////////////////
 
-    onSetNumber(args: EventData){
+    onNumberPage(args: EventData){
 
         var title: string
 
@@ -92,8 +88,8 @@ export class MyObservable extends Observable{
         this.result = this.number1 / this.number2
     }
 
-    onTap(args: EventData){
-        var colector: number = this.get("txtFrom")
+    onSetNumber(args: EventData){
+        var colector: number = this.get("getNumber")
         switch (activeTest + "") {
             case "1": {
                 this.number1 =+ colector
@@ -110,7 +106,7 @@ export class MyObservable extends Observable{
             }
         }
             
-        this.set("txtFrom", "")
+        this.set("getNumber", "")
 
         Frame.goBack()
     }

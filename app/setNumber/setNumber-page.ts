@@ -13,7 +13,7 @@ export function navigatingTo(args: EventData) {
 
       title = page.navigationContext.title      
 
-      obs.set("xNumber", title)
+      obs.set("xTitle", title)
       
 
 }  

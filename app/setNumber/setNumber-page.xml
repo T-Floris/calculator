@@ -3,8 +3,8 @@
     <ActionBar title="My App" icon="" />
 
     <GridLayout columns="*" rows="*, *, *, 6*" margin="20" padding="20" backgroundColor="lightgray">
-        <Label id="insertXNumber" row="0" col="0" text="{{ xNumber }}" row="0" col="1" class="h2 text-center"/>
-        <textField id="number" row="1" col="0" text="{{ txtFrom }}" hint="Skriv tal her..." class="h2" />
-        <Button id="sendNumberBack" row="2" col="0" text="OK" tap="{{ onTap }}" class="-primary" />
+        <Label id="insertXNumber" row="0" col="0" text="{{ xTitle }}" row="0" col="1" class="h2 text-center"/>
+        <textField id="number" row="1" col="0" text="{{ getNumber }}" hint="Skriv tal her..." class="h2" />
+        <Button id="sendNumberBack" row="2" col="0" text="OK" tap="{{ onSetNumber }}" class="-primary" />
     </GridLayout>
 </Page>
